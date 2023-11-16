@@ -89,6 +89,16 @@ defmodule Sparrow.FCM.V1.Notification do
     %{notification | android: config}
   end
 
+  @spec add_body(t, String.t()) :: t
+  def add_body(notification, config) do
+    %{notification | body: config}
+  end
+
+  @spec add_title(t, String.t()) :: t
+  def add_title(notification, config) do
+    %{notification | title: config}
+  end
+
   @doc """
   Add `Sparrow.FCM.V1.Webpush` to `Sparrow.FCM.V1.Notification`.
   """
